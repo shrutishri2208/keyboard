@@ -10,6 +10,20 @@ const stringReducer = (state = initialState, action) => {
       return {
         fullString: state.fullString + action.payload,
       };
+    case ACTIONS.DELETE_STRING:
+      return {
+        fullString: state.fullString.slice(0, -1),
+      };
+    case ACTIONS.SET_SPACE: {
+      return {
+        fullString: state.fullString + " ",
+      };
+    }
+    case ACTIONS.SET_TAB: {
+      return {
+        fullString: state.fullString + "    ",
+      };
+    }
     default: {
       return state;
     }

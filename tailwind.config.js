@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         copper: "#e6703d",
+        darkCopper: "#945c43",
       },
       width: {
         8: "2.1rem",

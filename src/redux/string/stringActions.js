@@ -6,3 +6,21 @@ export const setString = (payload) => {
     payload: payload,
   };
 };
+
+export const deleteString = () => {
+  return {
+    type: ACTIONS.DELETE_STRING,
+  };
+};
+
+export const setSpace = () => {
+  return {
+    type: ACTIONS.SET_SPACE,
+  };
+};
+
+export const setTab = () => {
+  return {
+    type: ACTIONS.SET_TAB,
+  };
+};
