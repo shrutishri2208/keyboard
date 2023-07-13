@@ -12,9 +12,11 @@ const Button = ({ text, value, text2, value2 }) => {
   return (
     <div>
       <button
-        className={`relative ${
-          text === "~" ? "w-8" : text === "u" ? "w-16" : "w-12"
-        } h-12 bg-copper rounded-t-lg rounded-b-3xl font-semibold ${
+        className={`${
+          text === "up" || text === "down"
+            ? "lg:h-4 text-transparent"
+            : "lg:h-12"
+        } relative lg:w-12 md:w-10 lg:h-12 md:h-10 sm:w-9 sm:h-9 bg-copper rounded-t-lg rounded-b-3xl font-semibold ${
           clicked === true ? "button-clicked" : ""
         }`}
         onClick={() => {
@@ -33,8 +35,12 @@ const Button = ({ text, value, text2, value2 }) => {
           }, 100);
         }}
       >
-        <span className="absolute top-0 left-2"> {text}</span>
-        <span className="absolute bottom-1 right-3"> {text2 || ""}</span>
+        <span className="absolute lg:top-0 md:top-0.5 sm:top-0.5 lg:left-2 md:left-2 sm:left-1.5 lg:text-base md:text-xs sm:text-xs">
+          {text}
+        </span>
+        <span className="absolute lg:bottom-1 md:bottom-1 sm:bottom-0.5 lg:right-3 md:right-2 lg:text-base md:text-xs sm:text-xs">
+          {text2 || ""}
+        </span>
       </button>
       {/* <p>{letter}</p> */}
     </div>

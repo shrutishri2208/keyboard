@@ -10,7 +10,7 @@ const Capslock = () => {
   return (
     <div>
       <button
-        className={`bg-copper h-12 w-28 rounded-t-lg rounded-b-3xl font-semibold  ${
+        className={`bg-copper lg:h-12 md:h-10 sm:h-9 lg:w-28 md:w-22 sm:w-20 rounded-t-lg rounded-b-3xl font-semibold lg:text-base md:text-xs sm:text-xs ${
           clicked === true ? "button-clicked" : ""
         }`}
         onClick={() => {

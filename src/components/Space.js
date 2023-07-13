@@ -9,7 +9,7 @@ const Space = () => {
   return (
     <div>
       <button
-        className={`bg-copper h-12 w-80 rounded-t-lg rounded-b-3xl font-semibold text-transparent ${
+        className={`bg-copper lg:h-12 md:h-10 sm:h-9 lg:w-82 md:w-66 sm:w-60 rounded-t-lg rounded-b-3xl font-semibold text-transparent ${
           clicked === true ? "button-clicked" : ""
         }`}
         onClick={() => {

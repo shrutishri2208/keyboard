@@ -6,7 +6,7 @@ const Function = () => {
   return (
     <div>
       <button
-        className={`bg-copper h-12 w-16 rounded-t-lg rounded-b-3xl font-semibold  ${
+        className={`bg-copper lg:h-12 md:h-10 sm:h-9 lg:w-16 md:w-12 sm:w-10 rounded-t-lg rounded-b-3xl font-semibold lg:text-base md:text-xs ${
           clicked === true ? "button-clicked" : ""
         }`}
         onClick={() => {

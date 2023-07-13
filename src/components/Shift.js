@@ -6,7 +6,7 @@ const Shift = () => {
   return (
     <div>
       <button
-        className={`bg-copper h-12 w-34 rounded-t-lg rounded-b-3xl font-semibold  ${
+        className={`bg-copper lg:h-12 md:h-10 sm:h-9 lg:w-34 md:w-26 sm:w-24 rounded-t-lg rounded-b-3xl font-semibold lg:text-base md:text-xs sm:text-xs ${
           clicked === true ? "button-clicked" : ""
         }`}
         onClick={() => {

@@ -58,7 +58,7 @@ export const numbers = [
 ];
 
 export const arrows = [
-  { text: "l", value: "left" },
+  { text: "", value: "left" },
   { text: "u", value: "up" },
   // { text: "d", value: "down" },
   { text: "r", value: "right" },

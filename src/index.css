@@ -3,7 +3,7 @@
 @tailwind components;
 
 :root {
-  --darkCopper: #ffc4a9;
+  --darkCopper: hsl(19, 100%, 83%);
 }
 
 body {
