@@ -3,7 +3,48 @@
 @tailwind components;
 
 :root {
-  --darkCopper: hsl(19, 100%, 83%);
+  --copper: #e6703d;
+  --lightCopper: #ffc4a8;
+  --green: #00a307;
+  --lightGreen: #b8ffbb;
+  --yellow: #dad100;
+  --lightYellow: #fffcae;
+  --blue: #002fa9;
+  --lightBlue: #b0c6ff;
+  --purple: #6300a0;
+  --lightPurple: #e1b1ff;
+}
+
+.key-copper {
+  background-color: var(--copper);
+  border-color: var(--lightCopper);
+}
+
+.key-green {
+  background-color: var(--green);
+  border-color: var(--lightGreen);
+}
+
+.key-yellow {
+  background-color: var(--yellow);
+  border-color: var(--lightYellow);
+}
+
+.key-blue {
+  background-color: var(--blue);
+  border-color: var(--lightBlue);
+}
+
+.key-purple {
+  background-color: var(--purple);
+  border-color: var(--lightPurple);
+  color: white;
+}
+
+.key-white {
+  background-color: black;
+  border-color: white;
+  color: white;
 }
 
 body {
@@ -21,10 +62,10 @@ code {
     monospace;
 }
 
-button {
+.key {
   position: relative;
   border-width: 2px 2px 6px 2px;
-  border-color: var(--darkCopper);
+  /* border-color: var(--lightCopper); */
   border-style: solid;
 }
 
@@ -62,3 +103,11 @@ button:hover {
   padding: 4px;
   /* z-index: -1; 
 } */
+
+.color-button {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  border-width: 4px;
+  /* position: absolute; */
+}

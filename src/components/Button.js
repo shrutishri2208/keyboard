@@ -8,12 +8,13 @@ const Button = ({ text, value, text2, value2 }) => {
   const [clicked, setClicked] = useState(false);
 
   const isCapital = useSelector((state) => state.isCapital.isCapital);
+  const colour = useSelector((state) => state.colour.colour);
 
   return (
     <button
-      className={`${
+      className={`key key-${colour} ${
         text === "up" || text === "down" ? "lg:h-4 text-transparent" : "lg:h-12"
-      } relative lg:w-12 md:w-10 sm:w-9 w-4 lg:h-12 md:h-10 sm:h-9 h-6 bg-copper sm:rounded-t-lg sm:rounded-b-3xl rounded-md font-semibold ${
+      } relative lg:w-12 md:w-10 sm:w-9 w-4 lg:h-12 md:h-10 sm:h-9 h-6  sm:rounded-t-lg sm:rounded-b-3xl rounded-md font-semibold ${
         clicked === true ? "button-clicked" : ""
       }`}
       onClick={() => {

@@ -5,12 +5,14 @@ import { setCapital } from "../redux/capital/capitalActions";
 const Capslock = () => {
   const dispatch = useDispatch();
   const isCapital = useSelector((state) => state.isCapital.isCapital);
+  const colour = useSelector((state) => state.colour.colour);
+
   const [clicked, setClicked] = useState(false);
 
   return (
     <div>
       <button
-        className={`bg-copper lg:h-12 md:h-10 sm:h-9 h-6 lg:w-28 md:w-22 sm:w-20 w-11 md:rounded-t-lg md:rounded-b-3xl sm:rounded-t-lg sm:rounded-2xl rounded-md font-semibold lg:text-base md:text-xs sm:text-xs text-xxs ${
+        className={`key key-${colour} lg:h-12 md:h-10 sm:h-9 h-6 lg:w-28 md:w-22 sm:w-20 w-11 md:rounded-t-lg md:rounded-b-3xl sm:rounded-t-lg sm:rounded-2xl rounded-md font-semibold lg:text-base md:text-xs sm:text-xs text-xxs ${
           clicked === true ? "button-clicked" : ""
         }`}
         onClick={() => {

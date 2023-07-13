@@ -80,3 +80,12 @@ export const specialCharacters = [
   ".",
   "/",
 ];
+
+export const colours = [
+  { colour: "copper", z: "" },
+  { colour: "green", z: "" },
+  { colour: "yellow", z: "" },
+  { colour: "blue", z: "" },
+  { colour: "purple", z: "" },
+  { colour: "white", z: "" },
+];
