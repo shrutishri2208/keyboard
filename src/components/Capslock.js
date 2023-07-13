@@ -10,7 +10,7 @@ const Capslock = () => {
   return (
     <div>
       <button
-        className={`bg-copper lg:h-12 md:h-10 sm:h-9 lg:w-28 md:w-22 sm:w-20 rounded-t-lg rounded-b-3xl font-semibold lg:text-base md:text-xs sm:text-xs ${
+        className={`bg-copper lg:h-12 md:h-10 sm:h-9 h-6 lg:w-28 md:w-22 sm:w-20 w-11 md:rounded-t-lg md:rounded-b-3xl sm:rounded-t-lg sm:rounded-2xl rounded-md font-semibold lg:text-base md:text-xs sm:text-xs text-xxs ${
           clicked === true ? "button-clicked" : ""
         }`}
         onClick={() => {
@@ -22,7 +22,7 @@ const Capslock = () => {
         }}
       >
         <p
-          className={`absolute -top-5 right-1 text-3xl ${
+          className={`absolute sm:-top-5 sm:right-1 sm:text-3xl -top-4 right-0.5  text-lg ${
             isCapital ? "text-white" : "text-black"
           }`}
         >
