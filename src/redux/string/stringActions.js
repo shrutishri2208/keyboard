@@ -24,3 +24,9 @@ export const setTab = () => {
     type: ACTIONS.SET_TAB,
   };
 };
+
+export const setNewLine = () => {
+  return {
+    type: ACTIONS.SET_NEWLINE,
+  };
+};

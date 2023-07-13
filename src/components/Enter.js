@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setNewLine } from "../redux/string/stringActions";
 
 const Enter = () => {
   const [clicked, setClicked] = useState(false);
+
+  const dispatch = useDispatch();
 
   return (
     <div>
@@ -10,6 +14,7 @@ const Enter = () => {
           clicked === true ? "button-clicked" : ""
         }`}
         onClick={() => {
+          dispatch(setNewLine());
           setClicked(true);
           setTimeout(() => {
             setClicked(false);

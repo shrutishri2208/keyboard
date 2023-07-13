@@ -24,6 +24,11 @@ const stringReducer = (state = initialState, action) => {
         fullString: state.fullString + "    ",
       };
     }
+    case ACTIONS.SET_NEWLINE: {
+      return {
+        fullString: state.fullString + "\n",
+      };
+    }
     default: {
       return state;
     }

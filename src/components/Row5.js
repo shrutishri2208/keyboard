@@ -8,7 +8,7 @@ import { arrows } from "../letters";
 
 const Row5 = () => {
   return (
-    <div className="sm:my-2 flex lg:gap-4 md:gap-2 sm:gap-1 gap-0.75 items-center justify-center">
+    <div className="sm:my-2 flex lg:gap-4 md:gap-2 sm:gap-1 gap-0.75 items-center justify-center  w-max m-auto">
       <Control />
       <Function />
       <Alt />

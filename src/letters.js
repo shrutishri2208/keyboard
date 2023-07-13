@@ -42,7 +42,7 @@ export const letters3 = [
 ];
 
 export const numbers = [
-  { text: "`", value: "`", text2: "`", value2: "`" },
+  { text: "`", value: "`", text2: "~", value2: "~" },
   { text: "1", value: "1", text2: "!", value2: "!" },
   { text: "2", value: "2", text2: "@", value2: "@" },
   { text: "3", value: "3", text2: "#", value2: "#" },
@@ -55,13 +55,6 @@ export const numbers = [
   { text: "0", value: "0", text2: ")", value2: ")" },
   { text: "-", value: "-", text2: "_", value2: "_" },
   { text: "=", value: "=", text2: "+", value2: "+" },
-];
-
-export const arrows = [
-  { text: "", value: "left" },
-  { text: "u", value: "up" },
-  // { text: "d", value: "down" },
-  { text: "r", value: "right" },
 ];
 
 export const specialCharacters = [
