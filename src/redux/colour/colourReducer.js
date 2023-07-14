@@ -1,7 +1,7 @@
 import { ACTIONS } from "./colourTypes";
 
 const initialState = {
-  colour: "blue",
+  colour: "copper",
 };
 
 const colourReducer = (state = initialState, action) => {

@@ -28,14 +28,6 @@ module.exports = {
       gap: {
         0.75: "0.2rem",
       },
-      spacing: {
-        0: "0rem",
-        10: "2.5rem",
-        20: "5rem",
-        30: "7.5rem",
-        40: "10rem",
-        50: "12.5",
-      },
     },
   },
   plugins: [],

@@ -4,13 +4,13 @@ import { setColour } from "../redux/colour/colourActions";
 
 const ColourButton = ({ colour, right, colourOptions, setColourOptions }) => {
   const dispatch = useDispatch();
-  console.log(`right-${right}`);
+  const rightClass = "right-" + right;
 
   return (
     <button
       className={`absolute bottom-0 ${
-        colourOptions === true ? `right-${right}` : "right-0"
-      } color-button key-${colour} `}
+        colourOptions === true ? rightClass : "right-0"
+      }  w-8 h-8 border-4 rounded-full transition-all duration-200 key-${colour} `}
       onClick={() => {
         dispatch(setColour(colour));
         setColourOptions(!colourOptions);

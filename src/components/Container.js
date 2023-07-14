@@ -16,8 +16,6 @@ const Container = () => {
   const fullString = useSelector((state) => state.fullString.fullString);
   const colour = useSelector((state) => state.colour.colour);
 
-  const dispatch = useDispatch();
-
   const [colourOptions, setColourOptions] = useState(true);
 
   const textArea = useRef();
@@ -70,7 +68,7 @@ const Container = () => {
     <div className=" h-screen">
       <div className="w-fit m-auto py-8 ">
         <div className="">
-          <div className="gap-2 flex justify-end my-2 w-full relative">
+          <div className="gap-2 flex justify-end my-4 w-full relative">
             {colours.map((item, index) => {
               return (
                 <ColourButton
@@ -82,9 +80,8 @@ const Container = () => {
               );
             })}
             <button
-              className={`absolute bottom-0 right-0 color-button key-${colour} `}
+              className={`absolute -bottom-1 -right-1 w-10 h-10 border-4 rounded-full key-${colour} `}
               onClick={() => {
-                console.log("CLICKED");
                 setColourOptions(!colourOptions);
               }}
             ></button>

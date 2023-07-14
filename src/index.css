@@ -108,11 +108,24 @@ button:hover {
   /* z-index: -1; 
 } */
 
-.color-button {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 100%;
-  border-width: 4px;
-  /* position: absolute; */
-  /* transition: all 1s; */
+.right-0 {
+  right: 0rem;
+}
+.right-10 {
+  right: 2.5rem;
+}
+.right-20 {
+  right: 5rem;
+}
+.right-30 {
+  right: 7.5rem;
+}
+.right-40 {
+  right: 10rem;
+}
+.right-50 {
+  right: 12.5rem;
+}
+.right-60 {
+  right: 15rem;
 }
