@@ -82,10 +82,10 @@ export const specialCharacters = [
 ];
 
 export const colours = [
-  { colour: "copper", z: "" },
-  { colour: "green", z: "" },
-  { colour: "yellow", z: "" },
-  { colour: "blue", z: "" },
-  { colour: "purple", z: "" },
-  { colour: "white", z: "" },
+  { colour: "copper", z: "12.5" },
+  { colour: "green", z: "10" },
+  { colour: "yellow", z: "7.5" },
+  { colour: "blue", z: "5" },
+  { colour: "purple", z: "2.5" },
+  { colour: "white", z: "0" },
 ];

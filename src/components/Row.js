@@ -12,7 +12,7 @@ import Space from "./Space";
 
 const Row = ({ items, row }) => {
   return (
-    <div className="sm:my-2 flex lg:gap-4 md:gap-2 sm:gap-1 gap-0.75 items-center justify-center w-max m-auto ">
+    <div className="sm:my-2 my-1 flex lg:gap-3 md:gap-2 sm:gap-1 gap-0.75 items-center justify-center w-max m-auto ">
       {row === "2" && <Tab />}
       {row === "3" && <Capslock />}
       {row === "4" && <Shift />}

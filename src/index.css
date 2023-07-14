@@ -110,4 +110,5 @@ button:hover {
   border-radius: 100%;
   border-width: 4px;
   /* position: absolute; */
+  /* transition: all 1s; */
 }

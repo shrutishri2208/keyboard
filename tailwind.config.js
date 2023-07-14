@@ -20,13 +20,16 @@ module.exports = {
         57: "14.3rem",
         66: "17rem",
         68: "17.5rem",
-        82: "20.75rem",
+        82: "19.75rem",
       },
       fontSize: {
         xxs: "0.4rem",
       },
       gap: {
         0.75: "0.2rem",
+      },
+      spacing: {
+        30: "0.75rem",
       },
     },
   },
