@@ -18,7 +18,7 @@ const Container = () => {
 
   const dispatch = useDispatch();
 
-  const [colourOptions, setColourOptions] = useState(false);
+  const [colourOptions, setColourOptions] = useState(true);
 
   const textArea = useRef();
 

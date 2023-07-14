@@ -69,6 +69,10 @@ code {
   border-style: solid;
 }
 
+.key:hover {
+  filter: brightness(0.8);
+}
+
 .button-clicked {
   position: relative;
   top: 2px;
