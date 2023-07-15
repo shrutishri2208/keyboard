@@ -26,7 +26,7 @@ const ExtraKeys = ({ name, lgH, mdH, smH, H, lgW, mdW, smW, W, text }) => {
 
   return (
     <button
-      className={`key key-${colour} lg:h-${lgH} md:${mdH} sm:h-${smH} h-${H} lg:w-${lgW} md:w-${mdW} sm:w-${smW} w-${W} md:rounded-t-lg md:rounded-b-3xl sm:rounded-t-lg sm:rounded-2xl rounded-md font-semibold lg:text-base md:text-xs sm:text-xs text-xxs ${
+      className={`key key-${colour} ${lgH} ${mdH} ${smH} ${H} ${lgW} ${mdW} ${smW} ${W} md:rounded-t-lg md:rounded-b-3xl sm:rounded-t-lg sm:rounded-2xl rounded-md font-semibold lg:text-base md:text-xs sm:text-xs text-xxs   ${
         clicked === true ? "button-clicked" : ""
       }`}
       onClick={() => {
