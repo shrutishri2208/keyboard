@@ -16,7 +16,7 @@ const Container = () => {
   const fullString = useSelector((state) => state.fullString.fullString);
   const colour = useSelector((state) => state.colour.colour);
 
-  const [colourOptions, setColourOptions] = useState(true);
+  const [colourOptions, setColourOptions] = useState(false);
 
   const textArea = useRef();
 

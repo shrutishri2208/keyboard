@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setString } from "../redux/string/stringActions";
 import { specialCharacters } from "../letters";
+import keySound from "../assets/keySound.mp3";
 
 const Button = ({ text, value, text2, value2 }) => {
   const dispatch = useDispatch();
@@ -9,6 +10,14 @@ const Button = ({ text, value, text2, value2 }) => {
 
   const isCapital = useSelector((state) => state.isCapital.isCapital);
   const colour = useSelector((state) => state.colour.colour);
+
+  const sound = useRef(null);
+
+  const playSound = () => {
+    if (sound.current) {
+      sound.current.play();
+    }
+  };
 
   return (
     <button
@@ -31,6 +40,7 @@ const Button = ({ text, value, text2, value2 }) => {
         setTimeout(() => {
           setClicked(false);
         }, 100);
+        playSound();
       }}
     >
       <span className="absolute lg:top-0 md:top-0.5 sm:top-0.5 top-0 lg:left-2 md:left-2 sm:left-1.5 left-0.5 lg:text-base md:text-xs sm:text-xs text-xxs">
@@ -39,6 +49,7 @@ const Button = ({ text, value, text2, value2 }) => {
       <span className="absolute lg:bottom-1 md:bottom-1 sm:bottom-0.5 bottom-0.5 lg:right-3 md:right-2 lg:text-base md:text-xs sm:text-xs text-xxs">
         {text2 || ""}
       </span>
+      <audio ref={sound} src={keySound} preload="auto" />
     </button>
   );
 };
