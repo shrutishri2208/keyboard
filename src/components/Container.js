@@ -11,6 +11,8 @@ import {
 import { setCapital } from "../redux/capital/capitalActions";
 import Row5 from "./Row5";
 import ColourButton from "./ColourButton";
+import soundOn from "../assets/soundOn.png";
+import soundOff from "../assets/soundOff.png";
 
 const Container = () => {
   const fullString = useSelector((state) => state.fullString.fullString);
@@ -69,6 +71,10 @@ const Container = () => {
       <div className="w-fit m-auto py-8 ">
         <div className="">
           <div className="gap-2 flex justify-end my-4 w-full relative">
+            <img
+              src={soundOn}
+              className="h-9 w-9 absolute left-0 -bottom-1 border-2 p-1 rounded-full"
+            ></img>
             {colours.map((item, index) => {
               return (
                 <ColourButton
@@ -85,14 +91,6 @@ const Container = () => {
                 setColourOptions(!colourOptions);
               }}
             ></button>
-
-            {/* <ColourButton
-              // colour={"blue"}
-              onClick={() => {
-                console.log("CLICKED");
-                setColourOptions(!colourOptions);
-              }}
-            /> */}
           </div>
           <textarea
             readOnly
