@@ -9,7 +9,7 @@ const Row = ({ items, row }) => {
     <div className="flex gap-2">
       {row === 3 && (
         <div className="flex gap-2">
-          <Key text={"caps\nlock"} type={"extra"} />
+          <Key text={"caps"} type={"extra"} />
         </div>
       )}
       {items.map((item, index) => {
@@ -17,12 +17,12 @@ const Row = ({ items, row }) => {
       })}
       {row === 1 && (
         <div className="flex gap-2">
-          <Key text={"back\nspace"} type={"extra"} />
+          <Key text={"back"} type={"extra"} />
         </div>
       )}
       {row === 3 && (
         <div className="flex gap-2">
-          <Key text={"enter"} type={"extra"} />
+          <Key text={"clear"} type={"extra"} />
         </div>
       )}
       {/* {row === 4 && (

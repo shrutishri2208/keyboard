@@ -5,6 +5,7 @@ import {
   deleteString,
   setSpace,
   setNewLine,
+  clearAll,
 } from "../redux/string/stringActions";
 import { setCapital } from "../redux/capital/capitalActions";
 import keySound from "../assets/keySound.mp3";
@@ -36,11 +37,11 @@ const Key = ({ text, value, text2, value2, type }) => {
           setIsPressed(false);
         }, 200);
         switch (text) {
-          case "caps\nlock": {
+          case "caps": {
             dispatch(setCapital(true));
             break;
           }
-          case "back\nspace": {
+          case "back": {
             dispatch(deleteString());
             break;
           }
@@ -54,6 +55,10 @@ const Key = ({ text, value, text2, value2, type }) => {
           }
           case "enter": {
             dispatch(setNewLine());
+            break;
+          }
+          case "clear": {
+            dispatch(clearAll());
             break;
           }
           default: {
@@ -86,14 +91,12 @@ const Key = ({ text, value, text2, value2, type }) => {
           <p
             className={`relative ${
               type === "single"
-                ? "text-2xl top-2"
+                ? "2xl:text-2xl xl:text-2xl lg:text-2xl md:text-lg 2xl:top-2 xl:top-2 lg:top-2 md:top-1"
                 : type === "extra" && text === "space"
                 ? "opacity-0"
-                : type === "extra" && text === "enter"
-                ? "text-xs text-center leading-4 top-3.5 "
                 : type === "extra"
-                ? "text-xs text-center leading-4 top-2 "
-                : "text-sm leading-5 top-1"
+                ? "2xl:text-xs xl:text-xs lg:text-xs md:text-xxs text-center  2xl:top-3.5 xl:top-2 lg:top-2 md:top-2.5"
+                : "2xl:text-sm xl:text-sm lg:text-sm md:text-xs leading-5 2xl:top-1 xl:top-1 lg:top-1 md:top-0.5"
             }`}
           >
             <p className="text-md">{text2}</p>

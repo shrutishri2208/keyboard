@@ -23,7 +23,7 @@ module.exports = {
         82: "19.75rem",
       },
       fontSize: {
-        xxs: "0.4rem",
+        xxs: "0.55rem",
       },
       gap: {
         0.75: "0.2rem",

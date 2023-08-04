@@ -4,4 +4,5 @@ export const ACTIONS = {
   SET_SPACE: "SET_SPACE",
   SET_TAB: "SET_TAB",
   SET_NEWLINE: "SET_NEWLINE",
+  CLEAR_ALL: "CLEAR_ALL",
 };

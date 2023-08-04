@@ -30,3 +30,9 @@ export const setNewLine = () => {
     type: ACTIONS.SET_NEWLINE,
   };
 };
+
+export const clearAll = () => {
+  return {
+    type: ACTIONS.CLEAR_ALL,
+  };
+};
