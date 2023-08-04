@@ -284,12 +284,14 @@ code {
     content: "MOBILES";
   }
   .typeWriterContainer {
+    rotate: -90deg;
     max-width: 750px;
     width: max-content;
     height: auto;
     margin: auto;
   }
   .textarea {
+    rotate: -90deg;
     width: 300px;
     position: relative;
     margin: auto;
