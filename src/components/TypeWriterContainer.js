@@ -7,33 +7,38 @@ import { useSelector } from "react-redux";
 const TypeWriterContainer = () => {
   const fullString = useSelector((state) => state.fullString.fullString);
 
-  const textHeight = useRef(null);
+  const textinput = useRef();
 
-  const setHeight = () => {
-    let scrollHeight = 0;
-    if (textHeight.current) {
-      textHeight.current.style.height = "auto";
-      scrollHeight = textHeight.current.scrollHeight;
-      if (scrollHeight > textHeight.current.clientHeight) {
-        textHeight.current.style.height = scrollHeight + 10 + "px";
-      }
+  const scrollText = () => {
+    if (textinput.current) {
+      let textLength = textinput.current.value.length || 0;
+      let textWidth = textinput.current.clientWidth + textLength;
+      textinput.current.style.width = textWidth + "px";
     }
   };
 
   return (
-    <div className="typeWriterContainer flex flex-col gap-2 items-center p-4">
-      <textarea
-        onChange={setHeight()}
-        ref={textHeight}
-        className="mb-4 w-2/3 text-black px-4 py-2 text-lg font-semibold rounded-md"
-        value={fullString}
-      ></textarea>
-
-      <Row items={numbers} row={1} />
-      <Row items={letters1} row={2} />
-      <Row items={letters2} row={3} />
-      <Row items={letters3} row={4} />
-      {/* <Key text={"space"} type={"extra"} /> */}
+    <div className="mt-16 flex flex-col gap-8">
+      <div className="textarea flex justify-center relative w-1/4  rounded-lg text-xl font-medium px-4 overflow-hidden">
+        <input
+          ref={textinput}
+          type="text"
+          onInput={scrollText()}
+          className="bg-transparent absolute right-4 top-0 w-auto border-none outline-none text-right pt-3 "
+          value={fullString}
+        />
+        <div className="textarea-gradient bg-red-400 rounded-lg h-full w-full absolute left-0 top-0"></div>
+      </div>
+      <div className="typeWriterContainer flex flex-col gap-2 items-center p-12 rounded-3xl">
+        <Row items={numbers} row={1} />
+        <Row items={letters1} row={2} />
+        <Row items={letters2} row={3} />
+        <Row items={letters3} row={4} />
+        {/* <br /> */}
+        <div className="mt-2">
+          <Key text={"space"} type={"extra"} />
+        </div>
+      </div>
     </div>
   );
 };

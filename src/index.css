@@ -24,7 +24,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000;
+  background-color: #e0e0e0;
   overflow: hidden;
 }
 
@@ -51,7 +51,31 @@ code {
     width: max-content;
     height: auto;
     margin: auto;
-    background-color: #1d1d1d;
+    background-image: url("./assets/texture.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .textarea {
+    margin: auto;
+    min-height: 3.1rem;
+    font-weight: 700;
+    background: #e0e0e0;
+    font-family: "Courier Prime", monospace;
+    color: #7d411b;
+    border: 1.5px solid rgb(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 1px 1.5px rgb(0, 0, 0, 0.1),
+      0px 0px 1px 1.5px rgb(255, 255, 255) inset;
+  }
+
+  .textarea-gradient {
+    background: linear-gradient(
+      90deg,
+      rgba(234, 234, 234, 1) 0%,
+      rgba(234, 234, 234, 1) 2%,
+      rgba(234, 234, 234, 0) 8%,
+      rgba(234, 234, 234, 0) 100%
+    );
   }
 
   .outer-circle,
@@ -59,13 +83,10 @@ code {
   .white-ring {
     border-radius: 100%;
   }
-  .ellipse-1-kb,
-  .ellipse-2-kb,
-  .ellipse-3-kb {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 2rem;
+  .outer-circle-kb,
+  .inner-circle-kb,
+  .white-ring-kb {
+    border-radius: 3rem;
   }
 
   .base-frame {
@@ -99,8 +120,8 @@ code {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 3.3rem;
+    height: 3.3rem;
     background-image: linear-gradient(
       150deg,
       #fff2c5 0%,
@@ -124,43 +145,56 @@ code {
   }
 
   .outer-circle p {
-    font-family: Courier;
-    font-style: normal;
-    /* color: transparent; */
-    color: rgb(255, 255, 255, 0.1);
-    font-weight: 700;
-    text-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.65);
+    text-shadow: 0px 0.5px 0.5px 0px rgba(0, 0, 0, 0.65);
+    font-weight: 400;
+    font-family: "Courier Prime", monospace;
+    color: transparent;
     background-image: linear-gradient(160deg, #fdb48b 0%, #432f23 100%);
     background-clip: text;
   }
 
-  .ellipse-1-kb {
+  .outer-circle-kb {
+    position: relative;
     width: 22.5rem;
     height: 3.75rem;
     flex-shrink: 0;
-    background: linear-gradient(209deg, #ffffff 0%, #000 100%);
-    box-shadow: -3px 6px 8px 1px #000 inset;
     overflow: hidden;
+    background: radial-gradient(
+      101.02% 101.02% at 48.48% -0%,
+      #4d4d4d 0%,
+      #000 100%
+    );
   }
 
-  .ellipse-3-kb {
-    filter: blur(1px);
-    border-radius: 2rem;
+  .white-ring-border-kb {
+    filter: blur(1.5px);
+    border-radius: 3rem;
     position: absolute;
-    height: 90%;
-    width: 98%;
-    border: 2px solid rgb(255, 255, 255);
-    /* z-index: ; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 21.8rem;
+    height: 3.3rem;
+    background-image: linear-gradient(
+      170deg,
+      rgb(255, 242, 197, 0.5) 0%,
+      rgba(255, 246, 215, 0.1) 30%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
-  .ellipse-2-kb {
-    width: 21.5rem;
+  .inner-circle-kb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 21.4rem;
     height: 2.835rem;
     background: radial-gradient(
-      66.07% 66.07% at 50% 50%,
-      #6a6a6a 0%,
-      rgba(0, 0, 0, 0.6) 100%
+      66.81% 66.81% at 50% 34.24%,
+      #272727 0%,
+      #0d0d0d 100%
     );
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6) inset;
   }
 }
 

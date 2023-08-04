@@ -72,21 +72,27 @@ const Key = ({ text, value, text2, value2, type }) => {
     >
       <div
         className={`${
-          text === "space" ? " ellipse-1-kb" : "outer-circle"
+          text === "space" ? " outer-circle-kb" : "outer-circle"
         } relative`}
       >
-        <div className="white-ring-border"></div>
         <div
-          className={`${text === "space" ? "ellipse-2-kb" : "inner-circle"}`}
+          className={`${
+            text === "space" ? "white-ring-border-kb" : "white-ring-border"
+          }`}
+        ></div>
+        <div
+          className={`${text === "space" ? "inner-circle-kb" : "inner-circle"}`}
         >
           <p
             className={`relative ${
               type === "single"
-                ? "text-2xl top-1.5"
+                ? "text-2xl top-2"
                 : type === "extra" && text === "space"
                 ? "opacity-0"
+                : type === "extra" && text === "enter"
+                ? "text-xs text-center leading-4 top-3.5 "
                 : type === "extra"
-                ? "text-xs text-center leading-4 "
+                ? "text-xs text-center leading-4 top-2 "
                 : "text-sm leading-5 top-1"
             }`}
           >

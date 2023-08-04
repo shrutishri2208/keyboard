@@ -12,8 +12,8 @@ const Row = ({ items, row }) => {
           <Key text={"caps\nlock"} type={"extra"} />
         </div>
       )}
-      {items.map((item) => {
-        return <Key {...item} />;
+      {items.map((item, index) => {
+        return <Key {...item} key={index} />;
       })}
       {row === 1 && (
         <div className="flex gap-2">
