@@ -47,7 +47,7 @@ p {
 }
 
 .complete-container {
-  background: url("./assets/texture-3.png");
+  background: url("./assets/texture-6.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -241,67 +241,6 @@ p {
   }
 }
 
-/* TABLETS */
-
-/* @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
-  .screen-size::after {
-    content: "TABLET";
-    background-color: red;
-  }
-  .typeWriterContainer {
-    width: max-content;
-    height: auto;
-    margin: auto;
-  }
-  .textarea {
-    width: 200px;
-    position: relative;
-    margin: auto;
-    min-height: 2rem;
-  }
-  .outer-circle {
-    width: 3.2rem;
-    height: 3.2rem;
-  }
-
-  .white-ring-border {
-    width: 2.4rem;
-    height: 2.4rem;
-  }
-  .inner-circle {
-    width: 2.1rem;
-    height: 2.1rem;
-  }
-
-  .outer-circle-kb {
-    width: 18rem;
-    height: 3rem;
-  }
-
-  .white-ring-border-kb {
-    width: 17.4rem;
-    height: 2.4rem;
-  }
-  .inner-circle-kb {
-    width: 17rem;
-    height: 2.1rem;
-  }
-  .single-text {
-    font-size: 1.125rem;
-    top: 0.25rem;
-  }
-  .extra-text {
-    font-size: 0.55rem;
-    top: 0.625rem;
-  }
-  .dual-text {
-    font-size: 1rem;
-    top: 0.125rem;
-  }
-} */
-
-/* MOBILES */
-
 @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
   .screen-size::after {
     content: "MOBILE";
@@ -361,4 +300,7 @@ p {
   .dual-text {
     font-size: 0.75rem;
   }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
 }
