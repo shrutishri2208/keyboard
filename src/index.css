@@ -42,6 +42,9 @@ code {
 button {
   -webkit-tap-highlight-color: transparent;
 }
+p {
+  transition: all 0.2s;
+}
 
 .complete-container {
   background: url("./assets/texture-3.png");
@@ -188,7 +191,7 @@ button {
 
   .textarea {
     font-weight: 700;
-    width: 400px;
+    width: 500px;
     position: relative;
     margin: auto;
     min-height: 4.25rem;
@@ -228,6 +231,10 @@ button {
   .extra-text {
     font-size: 0.8rem;
     top: 0.75rem;
+  }
+  .caps-text {
+    font-size: 0.8rem;
+    top: 0.7rem;
   }
   .dual-text {
     font-size: 1rem;
@@ -346,6 +353,10 @@ button {
   .extra-text {
     font-size: 0.6rem;
     top: 0.75rem;
+  }
+  .caps-text {
+    top: 0.6rem;
+    font-size: 0.6rem;
   }
   .dual-text {
     font-size: 0.75rem;

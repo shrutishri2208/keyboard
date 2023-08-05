@@ -93,20 +93,43 @@ const Key = ({ text, value, text2, value2, type }) => {
         <div
           className={`${text === "space" ? "inner-circle-kb" : "inner-circle"}`}
         >
-          <p
-            className={`relative ${
+          <div
+            className={`relative flex flex-col justify-center items-center ${
               type === "single"
                 ? "single-text "
                 : type === "extra" && text === "space"
                 ? "opacity-0"
+                : type === "extra" && text === "caps"
+                ? "caps-text "
                 : type === "extra"
                 ? "extra-text "
                 : "dual-text"
             }`}
           >
-            <p className="text-md">{text2}</p>
-            {text}
-          </p>
+            <p
+              className={`relative top-1 ${
+                isCapital === true
+                  ? "opacity-100 scale-150 2xl:top-3.5 xl:top-3.5 lg:top-3.5 top-2.5"
+                  : "opacity-50 scale-100"
+              }`}
+            >
+              {text2}
+            </p>
+            {text === "caps" && (
+              <div
+                className={`font-3xl h-1 w-1 rounded-full mb-0.5 bg-white ${
+                  isCapital === true ? "opacity-100" : "bg-white opacity-20"
+                }`}
+              ></div>
+            )}
+            <p
+              className={`${
+                isCapital === true && type === "dual" ? "hidden" : "opacity-100"
+              }`}
+            >
+              {text}
+            </p>
+          </div>
         </div>
       </div>
       <audio src={keySound} ref={sound} preload="auto"></audio>
