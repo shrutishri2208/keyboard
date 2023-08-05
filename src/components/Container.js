@@ -9,13 +9,7 @@ import {
   setNewLine,
 } from "../redux/string/stringActions";
 import { setCapital } from "../redux/capital/capitalActions";
-import Row5 from "./Row5";
-import ColourButton from "./ColourButton";
-import soundOn from "../assets/soundOn.png";
-import soundOff from "../assets/soundOff.png";
-import Key from "./Key";
 import TypeWriterContainer from "./TypeWriterContainer";
-import ModernContainer from "./ModernContainer";
 
 const Container = () => {
   const fullString = useSelector((state) => state.fullString.fullString);
@@ -25,21 +19,11 @@ const Container = () => {
 
   const textArea = useRef();
 
-  const setHeight = () => {
-    let scrollHeight = 0;
-    if (textArea.current) {
-      textArea.current.style.height = "auto";
-      scrollHeight = textArea.current.scrollHeight;
-      if (scrollHeight > textArea.current.clientHeight) {
-        textArea.current.style.height = scrollHeight + 10 + "px";
-      }
-    }
-  };
-
   return (
-    <div className="my-4 w-screen h-screen">
-      <h1 className="screen-size text-black"></h1>
+    // <div className="container 2xl:pt-28 xl:pt-28 lg:pt-28 md:pt-2 w-full">
+    <div className="complete-container w-screen h-screen 2xl:pt-28 xl:pt-28 lg:pt-28 md:pt-16">
       <TypeWriterContainer />
+      {/* <h1>HELLo</h1> */}
       {/* <ModernContainer /> */}
     </div>
   );

@@ -1,12 +1,10 @@
-import React, { useEffect } from "react";
-import Button from "./Button";
-import { extraKeys } from "../letters";
-import ExtraKeys from "./ExtraKeys";
+import React from "react";
+
 import Key from "./Key";
 
 const Row = ({ items, row }) => {
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-4">
       {row === 3 && (
         <div className="flex gap-2">
           <Key text={"caps"} type={"extra"} />
@@ -22,7 +20,7 @@ const Row = ({ items, row }) => {
       )}
       {row === 3 && (
         <div className="flex gap-2">
-          <Key text={"clear"} type={"extra"} />
+          <Key text={"tab"} type={"extra"} />
         </div>
       )}
       {/* {row === 4 && (

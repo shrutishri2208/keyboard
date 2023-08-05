@@ -39,31 +39,34 @@ code {
   scale: 0.99;
 }
 
-/* STYLES */
+button {
+  -webkit-tap-highlight-color: transparent;
+}
 
-.typeWriterContainer {
-  color: white;
-  background-image: url("./assets/texture.png");
+.complete-container {
+  background: url("./assets/texture-3.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+/* STYLES */
+
 .textarea {
-  background: #e0e0e0;
+  background: rgb(31, 29, 26);
   font-family: "Courier Prime", monospace;
-  color: #7d411b;
-  border: 1.6px solid rgb(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 1px 1.5px rgb(0, 0, 0, 0.1),
-    0px 0px 1px 1.5px rgb(255, 255, 255) inset;
+  color: rgb(135, 97, 73);
+  border: 2.5px solid rgb(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 2px 2px rgb(70, 68, 63, 0.6),
+    0px 0px 1.5px 2.5px rgba(0, 0, 0, 0.28) inset;
 }
 
 .textarea-gradient {
   background: linear-gradient(
     90deg,
-    rgba(234, 234, 234, 1) 0%,
-    rgba(234, 234, 234, 1) 2%,
-    rgba(234, 234, 234, 0) 8%,
-    rgba(234, 234, 234, 0) 100%
+    rgba(31, 29, 26, 1) 0%,
+    rgba(31, 29, 26, 1) 2%,
+    rgba(31, 29, 26, 0) 12%,
+    rgba(31, 29, 26, 0) 100%
   );
 }
 .outer-circle,
@@ -83,7 +86,7 @@ code {
       0px 1.596024513244629px 1.1970183849334717px rgba(0, 0, 0, 0.13)
     )
     drop-shadow(0px 5.360713958740234px 4.020535469055176px rgba(0, 0, 0, 0.2))
-    drop-shadow(0px 24px 18px rgba(0, 0, 0, 0.33));
+    drop-shadow(0px 24px 18px rgba(0, 0, 0, 0.4));
 }
 
 .outer-circle {
@@ -172,12 +175,12 @@ code {
 
 /* LAPTOPS */
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .screen-size::after {
     content: "LAPTOP";
   }
   .typeWriterContainer {
-    max-width: 1280px;
+    /* max-width: 1280px; */
     width: max-content;
     height: auto;
     margin: auto;
@@ -185,10 +188,10 @@ code {
 
   .textarea {
     font-weight: 700;
-    width: 320px;
+    width: 400px;
     position: relative;
     margin: auto;
-    min-height: 3.1rem;
+    min-height: 4.25rem;
   }
 
   .outer-circle {
@@ -215,42 +218,43 @@ code {
     height: 3.3rem;
   }
   .inner-circle-kb {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
     width: 21.4rem;
     height: 2.835rem;
-    background: radial-gradient(
-      66.81% 66.81% at 50% 34.24%,
-      #272727 0%,
-      #0d0d0d 100%
-    );
+  }
+  .single-text {
+    font-size: 1.5rem;
+    top: 0.4rem;
+  }
+  .extra-text {
+    font-size: 0.8rem;
+    top: 0.75rem;
+  }
+  .dual-text {
+    font-size: 1rem;
   }
 }
 
 /* TABLETS */
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+/* @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
   .screen-size::after {
     content: "TABLET";
+    background-color: red;
   }
   .typeWriterContainer {
-    max-width: 750px;
     width: max-content;
     height: auto;
     margin: auto;
   }
   .textarea {
-    width: 300px;
+    width: 200px;
     position: relative;
     margin: auto;
-    min-height: 3.1rem;
+    min-height: 2rem;
   }
   .outer-circle {
-    width: 3rem;
-    height: 3rem;
+    width: 3.2rem;
+    height: 3.2rem;
   }
 
   .white-ring-border {
@@ -275,53 +279,75 @@ code {
     width: 17rem;
     height: 2.1rem;
   }
-}
+  .single-text {
+    font-size: 1.125rem;
+    top: 0.25rem;
+  }
+  .extra-text {
+    font-size: 0.55rem;
+    top: 0.625rem;
+  }
+  .dual-text {
+    font-size: 1rem;
+    top: 0.125rem;
+  }
+} */
 
 /* MOBILES */
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
   .screen-size::after {
-    content: "MOBILES";
+    content: "MOBILE";
   }
   .typeWriterContainer {
-    rotate: -90deg;
-    max-width: 750px;
+    padding: 0.5rem;
+    /* max-width: 750px; */
     width: max-content;
     height: auto;
     margin: auto;
   }
   .textarea {
-    rotate: -90deg;
-    width: 300px;
+    width: 350px;
     position: relative;
     margin: auto;
-    min-height: 3.1rem;
+    min-height: 2.6rem;
   }
   .outer-circle {
-    width: 3rem;
-    height: 3rem;
+    width: 2.8rem;
+    height: 2.8rem;
   }
 
   .white-ring-border {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
   .inner-circle {
-    width: 2.1rem;
-    height: 2.1rem;
+    width: 2.2rem;
+    height: 2.2rem;
   }
 
   .outer-circle-kb {
     width: 18rem;
-    height: 3rem;
+    height: 2.8rem;
   }
 
   .white-ring-border-kb {
-    width: 17.4rem;
+    width: 17.6rem;
     height: 2.4rem;
   }
   .inner-circle-kb {
-    width: 17rem;
+    width: 17.3rem;
     height: 2.1rem;
+  }
+  .single-text {
+    font-size: 1.1rem;
+    top: 0.4rem;
+  }
+  .extra-text {
+    font-size: 0.6rem;
+    top: 0.75rem;
+  }
+  .dual-text {
+    font-size: 0.75rem;
   }
 }

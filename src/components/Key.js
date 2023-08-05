@@ -5,6 +5,7 @@ import {
   deleteString,
   setSpace,
   setNewLine,
+  setTab,
   clearAll,
 } from "../redux/string/stringActions";
 import { setCapital } from "../redux/capital/capitalActions";
@@ -57,6 +58,10 @@ const Key = ({ text, value, text2, value2, type }) => {
             dispatch(setNewLine());
             break;
           }
+          case "tab": {
+            dispatch(setTab());
+            break;
+          }
           case "clear": {
             dispatch(clearAll());
             break;
@@ -91,12 +96,12 @@ const Key = ({ text, value, text2, value2, type }) => {
           <p
             className={`relative ${
               type === "single"
-                ? "2xl:text-2xl xl:text-2xl lg:text-2xl md:text-lg 2xl:top-2 xl:top-2 lg:top-2 md:top-1"
+                ? "single-text "
                 : type === "extra" && text === "space"
                 ? "opacity-0"
                 : type === "extra"
-                ? "2xl:text-xs xl:text-xs lg:text-xs md:text-xxs text-center  2xl:top-3.5 xl:top-2 lg:top-2 md:top-2.5"
-                : "2xl:text-sm xl:text-sm lg:text-sm md:text-xs leading-5 2xl:top-1 xl:top-1 lg:top-1 md:top-0.5"
+                ? "extra-text "
+                : "dual-text"
             }`}
           >
             <p className="text-md">{text2}</p>
