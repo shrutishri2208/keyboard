@@ -8,7 +8,7 @@ const Container = () => {
 
   console.log(window.orientation);
   return (
-    <div className="complete-container w-screen h-screen 2xl:pt-28 xl:pt-28 lg:pt-28 md:pt-16">
+    <div className="complete-container w-screen h-screen 2xl:pt-28 xl:pt-28 lg:pt-28 md:pt-2">
       <TypeWriterContainer />
     </div>
   );
