@@ -36,7 +36,7 @@ const TypeWriterContainer = () => {
         <Row items={letters3} row={4} />
         <div className="mt-2 flex gap-4">
           <Key text={"space"} type={"extra"} />
-          <Key text={"clear"} type={"extra"} />
+          {/* <Key text={"clear"} type={"extra"} /> */}
         </div>
       </div>
     </div>
