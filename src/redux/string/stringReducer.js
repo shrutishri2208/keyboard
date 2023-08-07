@@ -29,6 +29,11 @@ const stringReducer = (state = initialState, action) => {
         fullString: state.fullString + "\n",
       };
     }
+    case ACTIONS.CLEAR_ALL: {
+      return {
+        fullString: "",
+      };
+    }
     default: {
       return state;
     }
