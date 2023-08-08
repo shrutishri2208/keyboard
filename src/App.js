@@ -36,10 +36,10 @@ function App() {
           }, 0);
           setTimeout(() => {
             setChange(false);
-          }, 1000);
+          }, 500);
           setTimeout(() => {
             setHidden(true);
-          }, 1500);
+          }, 1000);
         }}
         className={`relative z-40 ${
           theme === "writer"
