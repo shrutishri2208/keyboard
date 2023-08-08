@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "./components/Container";
 import scroll from "./assets/scroll.png";
 import alien from "./assets/alien.png";
@@ -9,17 +9,32 @@ function App() {
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme.theme);
 
+  const [change, setChange] = useState(false);
+
   return (
     <div className="App">
+      <div
+        className={`bg-black h-screen w-screen absolute z-30 duration-500 ${
+          change === true ? "opacity-100" : "opacity-0"
+        }`}
+      ></div>
       <button
         onClick={() => {
           if (theme === "writer") {
-            dispatch(setTheme("modern"));
+            setTimeout(() => {
+              dispatch(setTheme("modern"));
+            }, 300);
           } else {
-            dispatch(setTheme("writer"));
+            setTimeout(() => {
+              dispatch(setTheme("writer"));
+            }, 300);
           }
+          setChange(true);
+          setTimeout(() => {
+            setChange(false);
+          }, 500);
         }}
-        className={` ${
+        className={`relative z-40 ${
           theme === "writer"
             ? "theme-button theme-button-border"
             : "theme-button2 theme-button-border2"

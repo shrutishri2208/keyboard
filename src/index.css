@@ -29,7 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 code {
@@ -280,9 +280,10 @@ p {
 /* LAPTOPS */
 
 @media screen and (min-width: 1024px) {
-  .screen-size::after {
-    content: "LAPTOP";
+  .rotate-container {
+    visibility: hidden;
   }
+
   .theme-button,
   .theme-button2 {
     top: 4rem;
@@ -380,8 +381,8 @@ p {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
-  .screen-size::after {
-    content: "MOBILE";
+  .rotate-container {
+    visibility: hidden;
   }
   .theme-button,
   .theme-button2 {
@@ -476,4 +477,8 @@ p {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
+  .rotate-container {
+    background-color: black;
+    color: white;
+  }
 }
