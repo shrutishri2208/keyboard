@@ -1,47 +1,48 @@
 import React from "react";
-
 import Key from "./Key";
+import Key2 from "./Key2";
+import { useSelector } from "react-redux";
 
 const Row = ({ items, row }) => {
+  const theme = useSelector((state) => state.theme.theme);
+
   return (
-    <div className="flex gap-4">
+    <div className={`flex ${theme === "writer" ? "gap-4" : "gap-0"}`}>
       {row === 3 && (
         <div className="flex gap-2">
-          <Key text={"caps"} type={"extra"} />
+          {theme === "writer" ? (
+            <Key text={"caps"} type={"extra"} />
+          ) : (
+            <Key2 text={"caps"} type={"extra"} />
+          )}
         </div>
       )}
       {items.map((item, index) => {
-        return <Key {...item} key={index} />;
+        if (theme === "writer") {
+          return <Key {...item} key={index} />;
+        } else {
+          return <Key2 {...item} key={index} />;
+        }
       })}
       {row === 1 && (
         <div className="flex gap-2">
-          <Key text={"back"} type={"extra"} />
+          {theme === "writer" ? (
+            <Key text={"back"} type={"extra"} />
+          ) : (
+            <Key2 text={"back"} type={"extra"} />
+          )}
         </div>
       )}
       {row === 3 && (
         <div className="flex gap-2">
-          <Key text={"tab"} type={"extra"} />
+          {theme === "writer" ? (
+            <Key text={"tab"} type={"extra"} />
+          ) : (
+            <Key2 text={"tab"} type={"extra"} />
+          )}
         </div>
       )}
-      {/* {row === 4 && (
-        <div className="flex gap-2">
-          <Key text={"shift"} type={"extra"} />
-        </div>
-      )} */}
     </div>
-    // <div className="sm:my-2 my-1 flex lg:gap-3 md:gap-2 sm:gap-1 gap-0.75 items-center justify-center w-max m-auto ">
-    //   {row === "2" && <ExtraKeys {...extraKeys[8]} />}
-    //   {row === "3" && <ExtraKeys {...extraKeys[9]} />}
-    //   {row === "4" && <ExtraKeys {...extraKeys[11]} />}
-
-    //   {items &&
-    //     items.map((item, index) => {
-    //       return <Button {...item} key={index} />;
-    //     })}
-    //   {row === "1" && <ExtraKeys {...extraKeys[7]} />}
-    //   {row === "3" && <ExtraKeys {...extraKeys[10]} />}
-    //   {row === "4" && <ExtraKeys {...extraKeys[11]} />}
-    // </div>
   );
 };
 

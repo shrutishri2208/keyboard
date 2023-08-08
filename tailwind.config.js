@@ -4,12 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        lightcopper: "#ffc4a8",
-        lightgreen: "#b8ffbb",
-        lightyellow: "#fffcae",
-        lightblue: "#b0c6ff",
-        lightpurple: "#e1b1ff",
-        lightwhite: "ffffff",
+        green: "#9eff00",
       },
       width: {
         8: "2.1rem",

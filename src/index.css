@@ -16,6 +16,10 @@
   --purple: #6300a0;
   --lightPurple: #e1b1ff;
 }
+@font-face {
+  font-family: "ModernFont";
+  src: url("../src/fonts/Ledsim-JRz7o.ttf") format("truetype");
+}
 
 body {
   margin: 0;
@@ -24,8 +28,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e0e0e0;
-  overflow: hidden;
+  background-color: #000;
+  /* overflow: hidden; */
 }
 
 code {
@@ -33,10 +37,48 @@ code {
     monospace;
 }
 
+.theme-button {
+  position: fixed;
+  background-color: rgb(34, 30, 30);
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+.theme-button:hover {
+  box-shadow: 0px 0px 4px 4px rgb(70, 68, 63, 0.4),
+    0px 0px 1.5px 2px rgba(0, 0, 0, 0.6) inset;
+}
+.theme-button-border {
+  border: 1px solid rgb(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 2px 2.5px rgb(70, 68, 63, 0.4),
+    0px 0px 1.5px 2px rgba(0, 0, 0, 0.6) inset;
+}
+.theme-button2 {
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+.theme-button2:hover {
+  box-shadow: 0px 0px 4px 4px rgb(70, 68, 63, 0.4),
+    0px 0px 1.5px 2px rgba(0, 0, 0, 0.6) inset;
+}
+.theme-button-border2 {
+  border: 3px solid rgb(158, 255, 0, 0.3);
+  box-shadow: 0px 0px 2px 2.5px rgb(70, 68, 63, 0.4);
+}
+
 .key-pressed {
   position: relative;
   top: 4px;
   scale: 0.99;
+}
+
+.key2:hover {
+  background-color: #9eff0088;
+}
+
+.key2-pressed {
+  scale: 0.95;
 }
 
 button {
@@ -46,10 +88,17 @@ p {
   transition: all 0.2s;
 }
 
-.complete-container {
+.complete-container-writer {
   background: url("./assets/texture-6.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+.complete-container-modern {
+  background: radial-gradient(
+    100% 100% at 50% 0%,
+    rgba(61, 121, 47, 0.5) 0%,
+    #0e0e10 100%
+  );
 }
 
 /* STYLES */
@@ -62,6 +111,17 @@ p {
   box-shadow: 0px 0px 2px 2px rgb(70, 68, 63, 0.6),
     0px 0px 1.5px 2.5px rgba(0, 0, 0, 0.28) inset;
 }
+.textarea2 {
+  background: rgb(115, 176, 16);
+  font-family: "ModernFont";
+  color: #000000;
+  border: 6px solid rgba(0, 0, 0, 0.75);
+  /* box-shadow: 0px 0px 2px 2px rgba(53, 86, 0, 0.2); */
+}
+
+.textarea2 input {
+  letter-spacing: 0.2rem;
+}
 
 .textarea-gradient {
   background: linear-gradient(
@@ -70,6 +130,16 @@ p {
     rgba(31, 29, 26, 1) 2%,
     rgba(31, 29, 26, 0) 12%,
     rgba(31, 29, 26, 0) 100%
+  );
+}
+
+.textarea-gradient2 {
+  background: linear-gradient(
+    90deg,
+    rgb(115, 176, 16, 1) 0%,
+    rgb(115, 176, 16, 1) 2%,
+    rgba(115, 176, 16, 0) 12%,
+    rgba(115, 176, 16, 0) 100%
   );
 }
 .outer-circle,
@@ -176,11 +246,50 @@ p {
   );
 }
 
+.inner-box,
+.inner-box-kb {
+  border-radius: 0.2rem;
+  background: radial-gradient(
+    95.79% 95.79% at 50.51% 4.21%,
+    rgba(30, 30, 30, 0.52) 0%,
+    rgba(0, 0, 0, 0.68) 100%
+  );
+  box-shadow: 0px 2px 10px 2px #9eff001a;
+}
+
+.inner-box p {
+  color: #9eff00;
+  font-family: "ModernFont";
+}
+
+.p-shadow {
+  color: #9eff00;
+  font-family: "ModernFont";
+  filter: blur(5px);
+}
+
+.outer-shadow,
+.outer-shadow-kb {
+  border-radius: 0.2rem;
+  background: linear-gradient(
+    rgba(158, 255, 0, 0) 0%,
+    rgba(180, 255, 0, 0.28) 100%
+  );
+}
+
 /* LAPTOPS */
 
 @media screen and (min-width: 1024px) {
   .screen-size::after {
     content: "LAPTOP";
+  }
+  .theme-button,
+  .theme-button2 {
+    top: 4rem;
+    right: 4rem;
+    height: 3rem;
+    width: 3rem;
+    padding: 0.75rem;
   }
   .typeWriterContainer {
     /* max-width: 1280px; */
@@ -189,7 +298,8 @@ p {
     margin: auto;
   }
 
-  .textarea {
+  .textarea,
+  .textarea2 {
     font-weight: 700;
     width: 500px;
     position: relative;
@@ -200,6 +310,14 @@ p {
   .outer-circle {
     width: 3.75rem;
     height: 3.75rem;
+  }
+  .inner-box {
+    width: 4.3rem;
+    height: 4.3rem;
+  }
+
+  .outer-shadow {
+    padding: 0.1rem;
   }
 
   .white-ring-border {
@@ -216,6 +334,10 @@ p {
     height: 3.75rem;
   }
 
+  .inner-box-kb {
+    height: 4.3rem;
+    width: 24rem;
+  }
   .white-ring-border-kb {
     width: 21.8rem;
     height: 3.3rem;
@@ -239,11 +361,35 @@ p {
   .dual-text {
     font-size: 1rem;
   }
+
+  .single-text2 {
+    font-size: 1.6rem;
+    position: relative;
+    top: 2px;
+  }
+  .extra-text2 {
+    font-size: 1.3rem;
+    position: relative;
+    top: 1px;
+  }
+  .dual-text2 {
+    font-size: 1.3rem;
+    position: relative;
+    top: 1px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
   .screen-size::after {
     content: "MOBILE";
+  }
+  .theme-button,
+  .theme-button2 {
+    width: 2rem;
+    height: 2rem;
+    top: 0.75rem;
+    right: 1rem;
+    padding: 0.5rem;
   }
   .typeWriterContainer {
     padding: 0.5rem;
@@ -252,7 +398,8 @@ p {
     height: auto;
     margin: auto;
   }
-  .textarea {
+  .textarea,
+  .textarea2 {
     width: 350px;
     position: relative;
     margin: auto;
@@ -261,6 +408,14 @@ p {
   .outer-circle {
     width: 2.8rem;
     height: 2.8rem;
+  }
+
+  .inner-box {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+  .outer-shadow {
+    padding: 0.1rem;
   }
 
   .white-ring-border {
@@ -275,6 +430,10 @@ p {
   .outer-circle-kb {
     width: 18rem;
     height: 2.8rem;
+  }
+  .inner-box-kb {
+    height: 2.8rem;
+    width: 24rem;
   }
 
   .white-ring-border-kb {
@@ -299,6 +458,20 @@ p {
   }
   .dual-text {
     font-size: 0.75rem;
+  }
+  .single-text2 {
+    font-size: 1rem;
+    position: relative;
+    top: 1px;
+  }
+  .extra-text2 {
+    font-size: 0.9rem;
+    position: relative;
+    top: 2px;
+  }
+  .dual-text2 {
+    font-size: 0.9rem;
+    top: 2px;
   }
 }
 
