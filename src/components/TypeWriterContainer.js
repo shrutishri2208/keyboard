@@ -32,6 +32,7 @@ const TypeWriterContainer = () => {
           onInput={scrollText()}
           className="bg-transparent absolute right-3 top-0 w-auto border-none outline-none text-right 2xl:pt-5 xl:pt-5 lg:pt-5 md:pt-1.5"
           value={fullString}
+          readOnly
         />
         <div
           className={`${

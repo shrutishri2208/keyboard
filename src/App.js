@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Container from "./components/Container";
 import scroll from "./assets/scroll.png";
 import alien from "./assets/alien.png";
 import { useDispatch, useSelector } from "react-redux";
 import { setTheme } from "./redux/theme/themeActions";
+import { useLocation } from "react-router-dom";
 
 function App() {
   const dispatch = useDispatch();
@@ -11,6 +12,15 @@ function App() {
 
   const [change, setChange] = useState(false);
   const [hidden, setHidden] = useState(true);
+
+  const location = useLocation();
+  console.log("FROM URL: ", location.pathname);
+
+  useEffect(() => {
+    dispatch(setTheme(location.pathname));
+  }, [location.pathname]);
+
+  console.log("THEME: ", theme);
 
   return (
     <div className="App">
