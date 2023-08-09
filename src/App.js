@@ -14,10 +14,14 @@ function App() {
   const [hidden, setHidden] = useState(true);
 
   const location = useLocation();
-  console.log("FROM URL: ", location.pathname);
+  console.log("FROM URL: ", typeof location.pathname);
 
   useEffect(() => {
-    dispatch(setTheme(location.pathname));
+    if (location.pathname !== "modern" && location.pathname !== "writer") {
+      dispatch(setTheme("writer"));
+    } else {
+      dispatch(setTheme(location.pathname));
+    }
   }, [location.pathname]);
 
   console.log("THEME: ", theme);
