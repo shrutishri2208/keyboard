@@ -13,6 +13,7 @@ import keySound from "../assets/keySound.mp3";
 
 const Key = ({ text, value, text2, value2, type }) => {
   const [isPressed, setIsPressed] = useState(false);
+  const [isHover, setIsHover] = useState(false);
 
   const dispatch = useDispatch();
   const fullString = useSelector((state) => state.fullString.fullString);
@@ -31,6 +32,9 @@ const Key = ({ text, value, text2, value2, type }) => {
       className={`key flex justify-between items-center base-frame ${
         isPressed === true ? "key-pressed" : ""
       }`}
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
+      onMouseOver={() => setIsHover(true)}
       onClick={() => {
         playSound();
         setIsPressed(true);
@@ -91,7 +95,11 @@ const Key = ({ text, value, text2, value2, type }) => {
           }`}
         ></div>
         <div
-          className={`${text === "space" ? "inner-circle-kb" : "inner-circle"}`}
+          className={`${
+            text === "space" ? "inner-circle-kb" : "inner-circle"
+          } ${
+            isHover === true ? "inner-circle-hover inner-circle-kb-hover" : ""
+          }`}
         >
           <div
             className={`relative flex flex-col justify-center items-center ${
