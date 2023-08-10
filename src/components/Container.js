@@ -8,9 +8,6 @@ const Container = () => {
   const [orientation, setOrientation] = useState(window.orientation);
   const theme = useSelector((state) => state.theme.theme);
 
-  console.log(orientation);
-
-  console.log(window.orientation);
   return (
     <div
       className={` ${

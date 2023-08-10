@@ -14,7 +14,6 @@ function App() {
   const [hidden, setHidden] = useState(true);
 
   const location = useLocation();
-  console.log("FROM URL: ", typeof location.pathname);
 
   useEffect(() => {
     if (location.pathname !== "modern" && location.pathname !== "writer") {
@@ -23,8 +22,6 @@ function App() {
       dispatch(setTheme(location.pathname));
     }
   }, [location.pathname]);
-
-  console.log("THEME: ", theme);
 
   return (
     <div className="App">

@@ -55,7 +55,6 @@ const Key = ({ text, value, text2, value2, type }) => {
             break;
           }
           case "shift": {
-            console.log("SHIFT");
             break;
           }
           case "enter": {
