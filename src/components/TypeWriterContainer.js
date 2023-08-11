@@ -20,7 +20,7 @@ const TypeWriterContainer = () => {
   };
 
   return (
-    <div className=" flex flex-col 2xl:gap-8 xl:gap-8 lg:gap-8 md:gap-2">
+    <div className=" flex flex-col 2xl:gap-8 xl:gap-8 lg:gap-8 md:gap-2 2xl:mt-20 xl:mt-20 lg:mt-20 md:mt-0 mt-0 ">
       <div
         className={`${
           theme === "writer" ? "textarea" : "textarea2"
