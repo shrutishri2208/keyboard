@@ -9,7 +9,7 @@ import {
   clearAll,
 } from "../redux/string/stringActions";
 import { setCapital } from "../redux/capital/capitalActions";
-import keySound from "../assets/keySound.mp3";
+import futureSound from "../assets/futureSound.mp3";
 
 const Key2 = ({ text, value, text2, value2, type }) => {
   const [isPressed, setIsPressed] = useState(false);
@@ -32,6 +32,7 @@ const Key2 = ({ text, value, text2, value2, type }) => {
         isCapital === true && text === "caps" ? "bg-green bg-opacity-60" : ""
       } ${isPressed === true ? "key2-pressed" : ""}`}
       onClick={() => {
+        playSound();
         setIsPressed(true);
         setTimeout(() => {
           setIsPressed(false);
@@ -167,7 +168,7 @@ const Key2 = ({ text, value, text2, value2, type }) => {
           </div>
         </div>
       </div> */}
-      <audio src={keySound} ref={sound} preload="auto"></audio>
+      <audio src={futureSound} ref={sound} preload="auto"></audio>
     </button>
   );
 };

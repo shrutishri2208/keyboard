@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import TypeWriterContainer from "./TypeWriterContainer";
 import { useSelector } from "react-redux";
 import mobile from "../assets/mobile.png";
-import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 
 const Container = () => {
   const [orientation, setOrientation] = useState(window.orientation);
