@@ -34,8 +34,8 @@ const Container = () => {
             >
               ROTATE
             </p>
-            <p style={{ fontSize: "2.05rem", lineHeight: "2.2rem" }}>
-              YOUR PHONE
+            <p style={{ fontSize: "2rem", lineHeight: "2.2rem" }}>
+              YOUR DEVICE
             </p>
           </div>
         </div>
