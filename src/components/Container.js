@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import TypeWriterContainer from "./TypeWriterContainer";
 import { useSelector } from "react-redux";
 import mobile from "../assets/mobile.png";
 
 const Container = () => {
-  const [orientation, setOrientation] = useState(window.orientation);
   const theme = useSelector((state) => state.theme.theme);
 
   return (

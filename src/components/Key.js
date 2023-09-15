@@ -16,7 +16,6 @@ const Key = ({ text, value, text2, value2, type }) => {
   const [isHover, setIsHover] = useState(false);
 
   const dispatch = useDispatch();
-  const fullString = useSelector((state) => state.fullString.fullString);
   const isCapital = useSelector((state) => state.isCapital.isCapital);
 
   const sound = useRef(null);

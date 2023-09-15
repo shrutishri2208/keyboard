@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import Row from "./Row";
 import Key from "./Key";
 import { numbers, letters1, letters2, letters3 } from "../letters";
